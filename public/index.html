@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>South Photography</title>
+        <link rel="stylesheet" href="output.css">
+        <script src="/src/content.js" defer></script> <!--RELATIVE PATH /sp-website-->
+    </head>
+    <body>
+        <header>
+            <div class="flex flex-row text-xl p-5 justify-between">
+                <div class="flex flex-row ">
+                    <h1 class="pr-2">SOUTH</h1>
+                    <h1 class="font-extralight">PHOTOGRAPHY</h1>
+                </div>
+                <div class="flex flex-row">
+                    <div class="flex flex-row align-baseline">
+                        <h1 class="pr-2">NEXT MEETING</h1>
+                        <h1 id="meetingDate" class="font-extralight"></h1>
+                        <script>
+                            // Get Date
+                            var now = new Date();
+
+                            // Before or After Meeting Day (Fri = 5)
+                            if (now.getDay() <= 5) {
+                                now.setDate(now.getDate() + (7 + (5 - now.getDay())))
+                            } else {
+                                now.setDate(now.getDate() + (7 - (now.getDay() - 5)))
+                            }
+                           
+                            // converts to string
+                            var datetime = (now.getDate() + "." + (now.getMonth() + 1) + "." + (now.getFullYear() - 2000))
+                            if (now.getDate() < 10) {
+                                datetime = "0" + datetime
+                            }
+                            // Insert into HTML
+                            document.getElementById("meetingDate").innerHTML = datetime;
+                        </script>
+                    </div>
+                    <a href="https://www.instagram.com/bsssphotography/" class="pl-4">
+                        <img src="/src/assets/IG_Glyph.svg" alt="Instagram Link" class="w-6 aspect-square">
+                    </a>
+                    <a href="https://www.instagram.com/bsssphotography/" class="pl-4">
+                        <img src="/src/assets/Discord_Glyph.svg" alt="Discord Link" class="w-6 aspect-square">
+                    </a>
+                </div>
+            </div>
+            
+            
+        </header>
+        
+    </body>
