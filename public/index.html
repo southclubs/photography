@@ -6,11 +6,31 @@
         <title>South Photography</title>
         <link rel="stylesheet" href="output.css">
         <script src="/src/content.js" defer></script> <!--RELATIVE PATH /sp-website-->
+
+        <script>
+            function sidebar_open() {
+                document.getElementById("sidebar").style.display = "relative"
+            }
+
+            function sidebar_close() {
+                document.getElementById("sidebar").style.display = "none"
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <div class="flex text-xl md:text-2xl lg:text-3xl p-5 mb-10 gap-6 justify-between">
-                <div class="flex flex-col md:flex-row grow justify-between">
+    <body class="">
+        <header class="sticky top-0 w-full bg-white">
+            <div class="flex text-xl md:text-2xl lg:text-3xl p-5 justify-between">
+                <!--  -->
+                <div class="flex gap-6 p-3 items-center">
+                    <button onclick="sidebar_open()">
+                        <img src="/src/assets/Arrow_Icon.svg" alt="Sidebar" class="w-5 aspect-square" >
+                        
+                    </button>
+                </div>
+                
+                <!-- SOUTH PHOTOGRAPHY NEXT MEETING -->
+
+                <div class="flex flex-col md:flex-row grow mr-6 justify-between">
                     <div class="flex flex-row ">
                         <h1 class="my-auto">SOUTH <span class="font-extralight">PHOTOGRAPHY</span></h1>
                     </div>
@@ -42,6 +62,7 @@
                         
                     </div>
                 </div>
+                <!-- socials links -->
                 <div class="flex gap-6 p-3 items-center">
                     <a href="https://www.instagram.com/bsssphotography/">
                         <img src="/src/assets/IG_Glyph.svg" alt="Instagram Link" class="w-6 aspect-square">
@@ -51,12 +72,18 @@
                     </a>
                 </div>
             </div>
+
+            <div id="sidebar" class="z-20 absolute h-full w-60 bg-black hidden">
+                <button onclick="sidebar_close()">close</button>
+            </div>
+            
+
         </header>
-        <main class="p-5 pt-0">
+        <main class="overflow-scroll h-screen z-10 flex flex-col gap-20 px-5">
             <!-- section -->
-            <div class="pb-20">
-                <div class="pb-5">
-                    <h2 class="text-lg md:text-xl lg:text-2xl">PHOTOGRAPHY <span class="font-extralight">13.12.2024</span></h2>
+            <div class="">
+                <div class="sticky top-0">
+                    <h2 class="pb-5 text-lg md:text-xl lg:text-2xl bg-white">PHOTOGRAPHY <span class="font-extralight">13.12.2024</span></h2>
                 </div>
                 <div class="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
                     <img src="/src/assets/sample_images/Horizontal_1.jpg" class="w-full">
@@ -69,24 +96,9 @@
             </div>
 
             <!-- section -->
-            <div class="pb-20">
-                <div class="pb-5">
-                    <h2 class="text-lg md:text-xl lg:text-2xl">PHOTOGRAPHY <span class="font-extralight">13.12.2024</span></h2>
-                </div>
-                <div class="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
-                    <img src="/src/assets/sample_images/Horizontal_1.jpg" class="w-full">
-                    <img src="/src/assets/sample_images/Vertical_2.jpg" class="w-full">
-                    <img src="/src/assets/sample_images/Horizontal_3.jpg" class="w-full">
-                    <img src="/src/assets/sample_images/Vertical_3.jpg" class="w-full">
-                    <img src="/src/assets/sample_images/Horizontal_2.jpg" class="w-full">
-                    <img src="/src/assets/sample_images/Vertical_4.jpg" class="w-full">
-                </div>
-            </div>
-
-            <!-- section -->
-            <div class="pb-20">
-                <div class="pb-5">
-                    <h2 class="text-lg md:text-xl lg:text-2xl">PHOTOGRAPHY <span class="font-extralight">13.12.2024</span></h2>
+            <div class="">
+                <div class="sticky top-0">
+                    <h2 class="pb-5 text-lg md:text-xl lg:text-2xl bg-white">PHOTOGRAPHY BUT ON A DIFFERENT DAY 🙀 <span class="font-extralight">13.12.2024</span></h2>
                 </div>
                 <div class="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
                     <img src="/src/assets/sample_images/Horizontal_1.jpg" class="w-full">
