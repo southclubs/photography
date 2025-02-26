@@ -69,7 +69,11 @@
                                     }
                                 
                                     // converts to string
-                                    var datetime = (now.getDate() + "." + (now.getMonth() + 1) + "." + (now.getFullYear() - 2000))
+                                    if (now.getMonth() < 10) {
+                                        var datetime = (now.getDate() + ".0" + (now.getMonth() + 1) + "." + (now.getFullYear() - 2000))
+                                    } else {
+                                        var datetime = (now.getDate() + "." + (now.getMonth() + 1) + "." + (now.getFullYear() - 2000))
+                                    }
                                     if (now.getDate() < 10) {
                                         datetime = "0" + datetime
                                     }
