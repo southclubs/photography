@@ -16,6 +16,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Find and Replace
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+          find: "/src/"
+          replace: "/photography/src/"
+          regex: false
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
