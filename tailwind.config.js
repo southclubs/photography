@@ -5,7 +5,19 @@ module.exports = {
     "./public/**/*.{html,js,css}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': [
+          'Inter',
+          'sans-serif'
+  
+        ],
+        
+        'icon': [
+          'Material Symbols Outlined'
+        ]
+      },
+    },
   },
   plugins: [],
 }
