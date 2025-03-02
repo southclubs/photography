@@ -12,7 +12,7 @@
             function toggle_sidebar() {
                 if (sidebar) {
                     sidebar = false;
-                    document.getElementById("sidebar").style.width = "0";
+                    document.getElementById("sidebar").style.transform = "translate(-5rem)";
                     document.getElementById("header").style.paddingLeft = "1.25rem";
                     document.getElementById("main").style.paddingLeft = "0";
 
@@ -20,7 +20,7 @@
                     
                 } else {
                     sidebar = true;
-                    document.getElementById("sidebar").style.width = "5rem";
+                    document.getElementById("sidebar").style.transform = "translate(0)";
                     document.getElementById("header").style.paddingLeft = "6.25rem";
                     document.getElementById("main").style.paddingLeft = "5rem";
 
@@ -31,18 +31,67 @@
         </script>
     </head>
     <body class="overscroll-none flex flex-col h-screen">
-        <nav id="sidebar" class="flex flex-col z-20 absolute h-full w-0 bg-white shadow-lg overflow-hidden transition-all ease-out duration-300 items-center align-middle pt-5">
-            <ul class="font-icon text-2xl  space-y-10 align-middle">
+        <nav id="sidebar" class="flex flex-col z-20 absolute h-full w-20 -translate-x-20 bg-white shadow-lg transition-all ease-out duration-300 justify-center select-none">
+            <ul class="font-icon text-2xl align-middle">
                  <!--Home Button-->
-                <li><a class="p-2 bg-black text-white" href="/public/index.html">home</a></li>
+                <li>
+                    <a href="#">
+                        <div class="flex p-7 overflow-hidden bg-black text-white w-20 hover:w-[21.5rem] h-20 items-center transition-all ease-out duration-300">
+                            <img src="/src/assets/nav_icons/Home_Icon.svg" alt="Home" class="w-6 aspect-square">
+                            <span class="ml-14 font-sans">
+                                HOME
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                
                  <!--Gallery Button-->
-                <li><a class="p-2" href="/public/about.html">gallery_thumbnail</a></li>
+                <li>
+                    <a href="#">
+                        <div class="flex p-7 overflow-hidden bg-white w-20 hover:w-[21.5rem] h-20 items-center transition-all ease-out duration-300">
+                            <img src="/src/assets/nav_icons/Gallery_Icon.svg" alt="Home" class="w-6 aspect-square invert">
+                            <span class="ml-14 font-sans">
+                                GALLERY
+                            </span>
+                        </div>
+                    </a>
+                </li>
                  <!--Events Button-->
-                <li><a class="p-2" href="/public/events.html">calendar_month</a></li>
+                <li>
+                    <a href="#">
+                        <div class="flex p-7 overflow-hidden bg-white w-20 hover:w-[21.5rem] h-20 items-center transition-all ease-out duration-300">
+                            <img src="/src/assets/nav_icons/Calendar_Icon.svg" alt="Home" class="w-6 aspect-square invert">
+                            <span class="ml-14 font-sans">
+                                EVENTS
+                            </span>
+                        </div>
+                    </a>
+                </li>
                  <!--Photographers Button-->
-                <li><a class="p-2" href="/public/photographers.html">photo_camera</a></li>
+                <li>
+                    <a href="#">
+                        <div class="flex p-7 overflow-hidden bg-white w-20 hover:w-[21.5rem] h-20 items-center transition-all ease-out duration-300">
+                            <img src="/src/assets/nav_icons/Camera_Icon.svg" alt="Home" class="w-6 aspect-square invert">
+                            <span class="ml-14 font-sans">
+                                PHOTOGRAPHERS
+                            </span>
+                        </div>
+                    </a>
+                </li>
                 <!--About Button-->
-                <li><a class="p-2" href="/public/gallery.html">info</a></li>
+                <li>
+                    <a href="#">
+                        <div class="flex p-7 overflow-hidden bg-white w-20 hover:w-[21.5rem] h-20 items-center transition-all ease-out duration-300">
+                            <img src="/src/assets/nav_icons/Info_Icon.svg" alt="Home" class="w-6 aspect-square invert">
+                            <span class="ml-14 font-sans">
+                                ABOUT
+                            </span>
+                        </div>
+                    </a>
+                </li>
+
+
+
             </ul>
         </nav>
 
