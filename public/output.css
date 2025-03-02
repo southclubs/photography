@@ -1067,12 +1067,36 @@ main {
   width: 21.5rem;
 }
 
+@media (min-width: 5px){
+  .min-\[5px\]\:block{
+    display: block;
+  }
+}
+
+@media (min-width: 420px){
+  .min-\[420px\]\:block{
+    display: block;
+  }
+}
+
 @media (min-width: 500px){
   .min-\[500px\]\:block{
     display: block;
   }
 
   .min-\[500px\]\:flex{
+    display: flex;
+  }
+}
+
+@media (min-width: 520px){
+  .min-\[520px\]\:flex{
+    display: flex;
+  }
+}
+
+@media (min-width: 550px){
+  .min-\[550px\]\:flex{
     display: flex;
   }
 }
